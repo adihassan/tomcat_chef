@@ -7,7 +7,7 @@ Vagrant.configure(2) do |config|
   config.vm.box = "centos-6.5"
 
  config.vm.provision "file", source: "C:\\Users\\projects\\demo\\files\\git-config", destination: "~/.gitconfig"
- 
+ config.omnibus.chef_version = :latest 
  
   # config.vm.box_check_update = false
 
