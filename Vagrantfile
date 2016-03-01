@@ -41,6 +41,7 @@ Vagrant.configure(2) do |config|
  config.vm.provision "chef_solo" do |chef|
   chef.cookbooks_path = "C:\\Users\\projects\\tomcat-chef\\supermarket"
   chef.add_recipe "java"
+  chef.add_recipe "tomcat7"
   chef.json = {
   "java" => {
      "jdk_version" => "7"
